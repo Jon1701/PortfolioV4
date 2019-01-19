@@ -1,0 +1,19 @@
+{
+  "name": "portfoliov4",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jon1701/PortfolioV4.git"
+  },
+  "author": "Jon1701",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Jon1701/PortfolioV4/issues"
+  },
+  "homepage": "https://github.com/Jon1701/PortfolioV4#readme"
+}
