@@ -1,8 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const CONSTANTS = {
+  NODE_ENV: {
+    PRODUCTION: 'production',
+    DEVELOPMENT: 'development',
+  },
+}
+
 const PATHS = {
   SRC: path.join(__dirname, 'src'),
+  DEST: path.join(__dirname, 'dist'),
 }
 
 const webpackConfig = {
@@ -27,6 +35,14 @@ const webpackConfig = {
       appMountId: 'app',
     }),
   ],
+  devServer: {
+    contentBase: PATHS.DEST,
+    compress: true,
+    open: false,
+    port: 8080,
+    clientLogLevel: 'warning',
+    stats: 'errors-only',
+  },
 }
 
 module.exports = webpackConfig;
