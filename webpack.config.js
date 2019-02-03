@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const PATHS = {
   SRC: path.join(__dirname, 'src'),
@@ -19,6 +20,13 @@ const webpackConfig = {
       }
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: require('html-webpack-template'),
+      inject: false,
+      appMountId: 'app',
+    }),
+  ],
 }
 
 module.exports = webpackConfig;
