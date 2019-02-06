@@ -18,3 +18,4 @@ plugins:
 rules:
   prettier/prettier: error
   global-require: off
+  import/no-unresolved: off
