@@ -1,17 +1,17 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const CONSTANTS = {
   NODE_ENV: {
     PRODUCTION: 'production',
     DEVELOPMENT: 'development',
   },
-}
+};
 
 const PATHS = {
   SRC: path.join(__dirname, 'src'),
   DEST: path.join(__dirname, 'dist'),
-}
+};
 
 module.exports = () => {
   // Get Node environment variable.
@@ -29,13 +29,13 @@ module.exports = () => {
 
   return {
     mode: process.env.NODE_ENV,
-  
+
     entry: path.join(PATHS.SRC, 'pages', 'index'),
-  
+
     resolve: {
-      extensions: ['.js', '.jsx']
+      extensions: ['.js', '.jsx'],
     },
-  
+
     module: {
       rules: [
         {
@@ -50,10 +50,10 @@ module.exports = () => {
         {
           test: /\.svg$/,
           loader: 'raw-loader',
-        }
+        },
       ],
     },
-  
+
     devServer: {
       contentBase: PATHS.DEST,
       compress: true,
@@ -62,8 +62,7 @@ module.exports = () => {
       clientLogLevel: 'warning',
       stats: 'errors-only',
     },
-  
-    plugins
-  } 
-}
 
+    plugins,
+  };
+};
