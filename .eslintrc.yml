@@ -9,11 +9,12 @@ parserOptions:
     jsx: true
 
 extends:
-- airbnb
-- plugin:prettier/recommended
+  - airbnb
+  - plugin:prettier/recommended
 
 plugins:
-- prettier
+  - prettier
 
 rules:
   prettier/prettier: error
+  global-require: off
