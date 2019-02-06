@@ -12,5 +12,12 @@ install-node-modules:
 	@npm ci
 	@echo Done installing node dependencies
 
+lint: lint-js
+
+lint-js:
+	@echo Linting JavaScript
+	@${NODE_MODULES_BIN}/eslint --ext .js,.jsx src webpack.config.js
+	@echo Done linting JavaScript
+
 dev:
 	@NODE_ENV=development ${NODE_MODULES_BIN}/webpack-dev-server --config webpack.config.js
