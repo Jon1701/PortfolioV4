@@ -19,5 +19,8 @@ lint-js:
 	@${NODE_MODULES_BIN}/eslint --ext .js,.jsx src webpack.config.js
 	@echo Done linting JavaScript
 
+lint-css:
+	@${NODE_MODULES_BIN}/stylelint './src/**/*.jsx' --syntax scss
+
 dev:
 	@NODE_ENV=development ${NODE_MODULES_BIN}/webpack-dev-server --config webpack.config.js
