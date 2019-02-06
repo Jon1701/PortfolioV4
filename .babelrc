@@ -1,4 +1,16 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"],
-  "plugins": ["babel-plugin-styled-components"]
+  "plugins": [
+    "babel-plugin-styled-components",
+    [
+      "babel-plugin-module-resolver",
+      {
+        "alias": {
+          "_backgrounds": "./src/static/backgrounds",
+          "_svg": "./src/static/svg",
+          "_pages": "./src/pages"
+        }
+      }
+    ]
+  ]
 }
