@@ -8,6 +8,7 @@
         "alias": {
           "_backgrounds": "./src/static/backgrounds",
           "_svg": "./src/static/svg",
+          "_components": "./src/components",
           "_pages": "./src/pages"
         }
       }
