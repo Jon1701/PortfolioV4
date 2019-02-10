@@ -1,6 +1,6 @@
 NODE_MODULES_BIN=./node_modules/.bin
 
-install: delete-node-modules install-node-modules
+install: install-node-modules
 
 delete-node-modules:
 	@echo Deleting node_modules/ folder
