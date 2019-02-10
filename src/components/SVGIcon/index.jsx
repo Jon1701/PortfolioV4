@@ -6,10 +6,12 @@ import styled from 'styled-components';
 const createObj = (svg, label) => ({ svg, label });
 
 const iconStore = {
+  babel: createObj(require('_svg/babel.svg'), 'Babel'),
   chartjs: createObj(require('_svg/chartjs.svg'), 'Chart.js'),
   confluence: createObj(require('_svg/confluence.svg'), 'Confluence'),
   css3: createObj(require('_svg/css3.svg'), 'CSS3'),
   debian: createObj(require('_svg/debian.svg'), 'Debian'),
+  digitalOcean: createObj(require('_svg/digitalocean.svg'), 'DigitalOcean'),
   docker: createObj(require('_svg/docker.svg'), 'Docker'),
   d3: createObj(require('_svg/d3.svg'), 'D3.js'),
   ec2: createObj(require('_svg/ec2.svg'), 'AWS EC2'),

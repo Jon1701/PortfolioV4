@@ -83,6 +83,7 @@ const AboutMeSection = () => {
     'docker',
     'git',
     'webpack',
+    'babel',
     'gulp',
     'sass',
     'postcss',
@@ -106,6 +107,7 @@ const AboutMeSection = () => {
     'githubLight',
     'debian',
     'ec2',
+    'digitalOcean',
     'python',
   ];
 
