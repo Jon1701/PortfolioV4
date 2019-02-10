@@ -91,11 +91,22 @@ const AboutMeSection = () => {
     'mysql',
     'heroku',
     'mocha',
+    'jest',
     'eslint',
     'stylelint',
+    'prettier',
+    'styledComponents',
     'expressjs',
     'php',
     'wordpress',
+    'jira',
+    'confluence',
+    'travis',
+    'stripe',
+    'githubLight',
+    'debian',
+    'ec2',
+    'python',
   ];
 
   return (
