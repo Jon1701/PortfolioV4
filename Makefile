@@ -12,7 +12,7 @@ install-node-modules:
 	@npm ci
 	@echo Done installing node dependencies
 
-lint: lint-js
+lint: lint-js lint-css
 
 lint-js:
 	@echo Linting JavaScript
