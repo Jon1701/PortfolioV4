@@ -59,7 +59,7 @@ const TechnologiesLayout = styled.div`
   & > div > div:first-child {
     svg {
       width: auto;
-      height: 60px;
+      height: 50px;
     }
   }
 
