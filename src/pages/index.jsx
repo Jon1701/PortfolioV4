@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 const GlobalStyle = createGlobalStyle`
   body {
     // Roboto font
-    @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
     // Background
     background-color: #282C37;
