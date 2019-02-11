@@ -49,7 +49,9 @@ const iconStore = {
   wordpress: createObj(require('_svg/wordpress.svg'), 'WordPress'),
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  //  No styles.
+`;
 
 const SVGIcon = ({ icon, label }) => (
   <Container>
