@@ -8,19 +8,18 @@ const Section = styled.section`
   // Positioning.
   position: relative;
 
-  // Dimensions
+  // Dimensions.
   max-width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
 
-  // Alignment
+  // Alignment.
   text-align: center;
 
-  // Font
-  font-family: 'Roboto', sans-serif;
+  // Font.
   font-size: 1rem;
 
-  // Background
+  // Background.
   background-color: #222d32;
   background-image: url(${bgImage});
   background-attachment: fixed;

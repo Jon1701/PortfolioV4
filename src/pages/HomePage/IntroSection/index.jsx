@@ -10,26 +10,22 @@ const Section = styled.section`
   // Positioning.
   position: relative;
 
-  // Dimensions
+  // Dimensions.
   max-width: 100vw;
   max-height: 100vh;
   min-height: 100vh;
   box-sizing: border-box;
 
-  // Layout
+  // Layout.
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 
-  // Alignment
+  // Alignment.
   text-align: center;
 
-  // Font
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-
-  // Background
+  // Background.
   background-color: #222d32;
   background-image: linear-gradient(${bgFilter}, ${bgFilter}), url(${bgImage});
   background-repeat: no-repeat;
@@ -44,11 +40,13 @@ const ContentMargin = styled.div`
 
 const Name = styled.div`
   font-size: 5rem;
+  font-weight: 100;
   margin-bottom: 15px;
 `;
 
 const TagLine = styled.div`
   font-size: 2rem;
+  font-weight: 200;
   margin-bottom: 15px;
 `;
 

@@ -8,18 +8,17 @@ const Section = styled.section`
   // Positioning.
   position: relative;
 
-  // Dimensions
+  // Dimensions.
   max-width: 100vw;
   box-sizing: border-box;
   padding: 25px 0;
 
-  // Alignment
+  // Alignment.
   text-align: center;
 
-  // Font
-  font-family: 'Roboto', sans-serif;
+  // Font.
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 300;
 
   // Background
   background-color: #222d32;

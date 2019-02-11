@@ -5,13 +5,14 @@ import HomePage from './HomePage';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    // Roboto font
-    @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+    // Load fonts.
+    @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400');
 
     // Background
     background-color: #282C37;
 
     // Font
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     color: #FFFFFF;
 

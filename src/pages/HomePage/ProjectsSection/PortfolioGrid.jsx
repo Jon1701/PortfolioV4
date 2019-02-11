@@ -48,7 +48,7 @@ const DescriptionContainer = styled.div`
 const Title = styled.div`
   // Font.
   font-size: 1.7rem;
-  font-weight: 300;
+  font-weight: 500;
   text-align: center;
 
   // Spacing.
@@ -57,7 +57,7 @@ const Title = styled.div`
 
 const SimpleDescription = styled.div`
   // Font.
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 300;
   text-align: center;
 
@@ -82,12 +82,14 @@ const DetailedDescription = styled.div`
 `;
 
 const PortfolioGrid = ({ projectIds }) => {
+  // Create an Object containing project information.
   const createObj = (image, title, simpleDescription, detailedDescription) => ({
     image,
     title,
     description: { simple: simpleDescription, detailed: detailedDescription },
   });
 
+  // Collection of projects.
   const projects = {
     evoPlugin: createObj(
       require('./static/images/evo-plugin.png'),

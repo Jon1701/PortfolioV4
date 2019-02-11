@@ -9,19 +9,18 @@ const Section = styled.section`
   // Positioning.
   position: relative;
 
-  // Dimensions
+  // Dimensions.
   max-width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
 
-  // Alignment
+  // Alignment.
   text-align: center;
 
-  // Font
-  font-family: 'Roboto', sans-serif;
+  // Font.
   font-size: 1rem;
 
-  // Background
+  // Background.
   background-color: #222d32;
   background-image: url(${bgImage});
   background-attachment: fixed;
@@ -71,6 +70,7 @@ const TechnologiesLayout = styled.div`
 `;
 
 const AboutMeSection = ({ refProp }) => {
+  // List of technology IDs.
   const technologies = [
     'html5',
     'css3',
@@ -123,6 +123,7 @@ const AboutMeSection = ({ refProp }) => {
 
         <p>Here are some of the technologies I have used:</p>
 
+        {/* Display icons for each technology. */}
         <TechnologiesLayout>
           {technologies.map(item => (
             <SVGIcon icon={item} key={item} />

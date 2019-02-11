@@ -3,8 +3,10 @@ import propTypes from 'prop-types';
 import SVGInline from 'react-svg-inline';
 import styled from 'styled-components';
 
+// Creates an object containing Icon information.
 const createObj = (svg, label) => ({ svg, label });
 
+// Collection of icons.
 const iconStore = {
   babel: createObj(require('_svg/babel.svg'), 'Babel'),
   chartjs: createObj(require('_svg/chartjs.svg'), 'Chart.js'),
