@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SVGInline from 'react-svg-inline';
 
@@ -86,7 +87,7 @@ const MoreInfoContainer = styled.div`
   margin-bottom: 80px;
 
   // Button appearance.
-  a {
+  button {
     // Colour.
     background-color: #16a085;
     color: #fff;
@@ -94,6 +95,7 @@ const MoreInfoContainer = styled.div`
     // Border.
     border: solid 1px #16a085;
     border-radius: 3px;
+    outline: none;
 
     // Font.
     font-size: 1rem;
@@ -106,9 +108,6 @@ const MoreInfoContainer = styled.div`
     // Cursor.
     cursor: pointer;
 
-    // Outline.
-    outline: none;
-
     // Hover effect.
     &:hover {
       background-color: #005d4b;
@@ -118,7 +117,7 @@ const MoreInfoContainer = styled.div`
   }
 `;
 
-const IntroSection = () => (
+const IntroSection = ({ handleScrollToAboutMe }) => (
   <Section>
     <ContentMargin>
       <Name>Jon Balon</Name>
@@ -144,10 +143,16 @@ const IntroSection = () => (
       </IconContainer>
 
       <MoreInfoContainer>
-        <a href="#about-me">Learn More About My Work</a>
+        <button type="button" onClick={handleScrollToAboutMe}>
+          Learn More
+        </button>
       </MoreInfoContainer>
     </ContentMargin>
   </Section>
 );
+
+IntroSection.propTypes = {
+  handleScrollToAboutMe: PropTypes.func.isRequired,
+};
 
 export default IntroSection;

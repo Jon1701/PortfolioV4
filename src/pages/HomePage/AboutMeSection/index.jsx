@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SVGIcon from '_components/SVGIcon';
 
@@ -69,7 +70,7 @@ const TechnologiesLayout = styled.div`
   }
 `;
 
-const AboutMeSection = () => {
+const AboutMeSection = ({ refProp }) => {
   const technologies = [
     'html5',
     'css3',
@@ -112,23 +113,28 @@ const AboutMeSection = () => {
   ];
 
   return (
-    <Section>
+    <Section ref={refProp}>
       <ContentMargin>
         <SectionHeader>About Me</SectionHeader>
         <p>
-          Hi! My name is Jon, and I am a Front-End Developer based in Toronto.
+          Hi! My name is Jon, and I am a Modern JavaScript Developer based in
+          Toronto.
         </p>
 
         <p>Here are some of the technologies I have used:</p>
 
         <TechnologiesLayout>
           {technologies.map(item => (
-            <SVGIcon icon={item} />
+            <SVGIcon icon={item} key={item} />
           ))}
         </TechnologiesLayout>
       </ContentMargin>
     </Section>
   );
+};
+
+AboutMeSection.propTypes = {
+  refProp: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default AboutMeSection;
