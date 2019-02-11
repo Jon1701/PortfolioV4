@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
 
     // Remove default margin
     margin: 0;
+
+    // Enable smooth scrolling.
+    scroll-behavior: smooth;
   }
 `;
 
