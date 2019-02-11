@@ -99,10 +99,6 @@ const PortfolioGrid = ({ projectIds }) => {
           and free solution to add SEO to sites running WordPress.
         </p>
         <p>
-          Future plans included SEO plugins for various content management
-          systems such as Shopify, Squarespace, and Drupal.
-        </p>
-        <p>
           For this project, I created the plugin from scratch, set up the build
           tools to develop the plugin locally using Docker and deploy the plugin
           to the WordPress plugin repository, and actively developed the plugin
@@ -121,7 +117,6 @@ const PortfolioGrid = ({ projectIds }) => {
           Subscription Keys for their various web properties which used the
           plugin.
         </p>
-        <p>Future plans included a referral program, and web crawlers.</p>
         <p>
           For this project, I iterated upon and maintained the front-end code
           throughout the project lifetime.
