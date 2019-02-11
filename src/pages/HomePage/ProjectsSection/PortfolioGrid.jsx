@@ -55,17 +55,6 @@ const Title = styled.div`
   margin-bottom: 10px;
 `;
 
-const SimpleDescription = styled.div`
-  // Font.
-  font-size: 1.3rem;
-  font-weight: 300;
-  text-align: center;
-
-  // Spacing.
-  margin-top: 5px;
-  margin-bottom: 15px;
-`;
-
 const DetailedDescription = styled.div`
   font-weight: 300;
   text-align: left;
@@ -171,7 +160,6 @@ const PortfolioGrid = ({ projectIds }) => {
 
             <DescriptionContainer>
               <Title>{title}</Title>
-              <SimpleDescription>{description.simple}</SimpleDescription>
               <DetailedDescription>{description.detailed}</DetailedDescription>
             </DescriptionContainer>
           </PortfolioItem>
