@@ -2,6 +2,11 @@ NODE_MODULES_BIN=./node_modules/.bin
 
 install: install-node-modules
 
+delete-build-folder:
+	@echo Deleting build folder
+	@rm -rf dist/
+	@echo Done deleting build folder.
+
 delete-node-modules:
 	@echo Deleting node_modules/ folder
 	@rm -rf node_modules/
@@ -24,3 +29,6 @@ lint-css:
 
 dev:
 	@NODE_ENV=development ${NODE_MODULES_BIN}/webpack-dev-server --config webpack.config.js
+
+build: delete-build-folder
+	@NODE_ENV=production ${NODE_MODULES_BIN}/webpack -p --config webpack.config.js
