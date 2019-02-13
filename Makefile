@@ -32,3 +32,6 @@ dev:
 
 build: delete-build-folder
 	@NODE_ENV=production ${NODE_MODULES_BIN}/webpack -p --config webpack.config.js
+
+staging: build
+	@${NODE_MODULES_BIN}/http-server ./dist/ -p 9000
