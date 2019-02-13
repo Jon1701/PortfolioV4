@@ -6,6 +6,7 @@
       "babel-plugin-module-resolver",
       {
         "alias": {
+          "_static": "./src/static",
           "_backgrounds": "./src/static/backgrounds",
           "_icons": "./src/static/icons",
           "_svg": "./src/static/svg",
