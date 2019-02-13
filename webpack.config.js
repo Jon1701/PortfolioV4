@@ -1,12 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const CONSTANTS = {
+  PRODUCTION: 'production',
+  DEVELOPMENT: 'development',
+};
+
 const PATHS = {
   SRC: path.join(__dirname, 'src'),
   DEST: path.join(__dirname, 'dist'),
 };
 
 module.exports = () => {
+  // Determine if running in production or development.
+  const isProduction = process.env.NODE_ENV === CONSTANTS.PRODUCTION;
+
   // Base set of plugins.
   const plugins = [
     new HtmlWebpackPlugin({
@@ -16,10 +24,33 @@ module.exports = () => {
     }),
   ];
 
+  // Base optimization.
+  const optimization = {};
+
+  // Create vendor bundle chunk.
+  if (isProduction) {
+    optimization.splitChunks = {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    };
+  }
+
   return {
     mode: process.env.NODE_ENV,
 
-    entry: path.join(PATHS.SRC, 'pages', 'index'),
+    entry: {
+      index: path.join(PATHS.SRC, 'pages', 'index'),
+    },
+
+    output: {
+      filename: '[name].bundle.js',
+      path: path.join(PATHS.DEST),
+    },
 
     resolve: {
       extensions: ['.js', '.jsx'],
@@ -35,6 +66,9 @@ module.exports = () => {
         {
           test: /\.(png|jpg|jpeg|gif)$/,
           loader: 'file-loader',
+          options: {
+            name: `[folder]/[name].${new Date().getTime()}.[ext]`,
+          },
         },
         {
           test: /\.svg$/,
@@ -53,5 +87,7 @@ module.exports = () => {
     },
 
     plugins,
+
+    optimization,
   };
 };
