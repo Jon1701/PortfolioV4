@@ -1,0 +1,18 @@
+body {
+  // Load fonts.
+  @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400');
+
+  // Background
+  background-color: #282c37;
+
+  // Font
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+
+  // Remove default margin
+  margin: 0;
+
+  // Enable smooth scrolling.
+  scroll-behavior: smooth;
+}
