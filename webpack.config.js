@@ -21,6 +21,7 @@ module.exports = () => {
       template: require('html-webpack-template'),
       inject: false,
       appMountId: 'app',
+      title: 'Jon Balon - Modern JavaScript Developer',
     }),
   ];
 
