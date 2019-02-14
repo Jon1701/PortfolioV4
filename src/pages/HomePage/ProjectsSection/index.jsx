@@ -33,6 +33,10 @@ const ContentMargin = styled.div`
   max-width: 1500px;
   margin: 0 auto;
   padding: 25px 0 0 0;
+
+  @media only screen and (max-width: 1000px) {
+    margin: auto 25px;
+  }
 `;
 
 const SectionHeader = styled.h1`
@@ -40,12 +44,21 @@ const SectionHeader = styled.h1`
   font-weight: 100;
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.span`
+  // Make container span entire width.
+  display: block;
+
+  // Space above.
   margin-top: 100px;
 
   // Button appearance.
   a {
+    // Make button take as much width as it needs.
     display: inline-block;
+
+    // Prevent overflowing the viewport width.
+    box-sizing: border-box;
+    max-width: 100%;
 
     // Colour.
     background-color: #16a085;
@@ -81,6 +94,7 @@ const ButtonContainer = styled.div`
     svg {
       fill: white;
       height: 50px;
+      max-width: 100%;
     }
   }
 `;
