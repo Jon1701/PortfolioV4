@@ -11,7 +11,7 @@ const Layout = styled.div`
 const PortfolioItem = styled.div`
   // Layout.
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
 
   // Colour.
   background-color: #15202b;
@@ -23,7 +23,13 @@ const PortfolioItem = styled.div`
     margin-bottom: 25px;
   }
 
-  flex-basis: 45%;
+  @media only screen and (max-width: 1000px) {
+    margin: auto 25px;
+  }
+
+  @media only screen and (min-width: 1001px) {
+    max-width: 45%;
+  }
 `;
 
 const ImageContainer = styled.div`
