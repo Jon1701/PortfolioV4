@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SVGInline from 'react-svg-inline';
 import PortfolioGrid from './PortfolioGrid';
 
 const bgImage = require('_backgrounds/hixs_pattern_evolution_@2X.png');
@@ -39,6 +40,51 @@ const SectionHeader = styled.h1`
   font-weight: 100;
 `;
 
+const ButtonContainer = styled.div`
+  margin-top: 100px;
+
+  // Button appearance.
+  a {
+    display: inline-block;
+
+    // Colour.
+    background-color: #16a085;
+    color: #fff;
+
+    // Border.
+    border: solid 1px #16a085;
+    border-radius: 3px;
+    outline: none;
+
+    // Font.
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    // Spacing.
+    padding: 15px;
+
+    // Cursor.
+    cursor: pointer;
+
+    // Hover effect.
+    &:hover {
+      background-color: #005d4b;
+      border-color: #005d4b;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    svg {
+      fill: white;
+      height: 50px;
+    }
+  }
+`;
+
 const AboutMeSection = () => {
   return (
     <Section>
@@ -53,6 +99,19 @@ const AboutMeSection = () => {
             'navigateGroupWebsite',
           ]}
         />
+
+        <ButtonContainer>
+          <a
+            href="https://github.com/Jon1701"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <SVGInline svg={require('_icons/github.svg')} />
+            </div>
+            <div>More Projects Available on GitHub</div>
+          </a>
+        </ButtonContainer>
       </ContentMargin>
     </Section>
   );
