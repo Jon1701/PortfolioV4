@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const CONSTANTS = {
   PRODUCTION: 'production',
@@ -39,6 +40,15 @@ module.exports = () => {
         },
       },
     };
+  }
+
+  // Copy over CNAME.
+  if (isProduction) {
+    plugins.push(
+      new CopyWebpackPlugin([{ from: 'src/static/dns/CNAME', to: '' }], {
+        toType: 'file',
+      }),
+    );
   }
 
   return {
