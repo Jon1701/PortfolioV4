@@ -35,6 +35,10 @@ const PortfolioItem = styled.div`
 const ImageContainer = styled.div`
   img {
     width: 100%;
+
+    a {
+      color: inherit;
+    }
   }
 
   // Remove superfluous spacing.
@@ -161,7 +165,9 @@ const PortfolioGrid = ({ projectIds }) => {
         return (
           <PortfolioItem key={projectId}>
             <ImageContainer>
-              <img src={image} alt={`${title} ${description.simple}`} />
+              <a href={image} target="_blank" rel="noopener noreferrer">
+                <img src={image} alt={`${title} ${description.simple}`} />
+              </a>
             </ImageContainer>
 
             <DescriptionContainer>
