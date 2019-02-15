@@ -12,6 +12,8 @@ const PATHS = {
   DEST: path.join(__dirname, 'dist'),
 };
 
+const timestamp = new Date().getTime();
+
 module.exports = () => {
   // Determine if running in production or development.
   const isProduction = process.env.NODE_ENV === CONSTANTS.PRODUCTION;
@@ -59,7 +61,7 @@ module.exports = () => {
     },
 
     output: {
-      filename: '[name].bundle.js',
+      filename: `[name].${timestamp}.bundle.js`,
       path: path.join(PATHS.DEST),
     },
 
@@ -78,7 +80,7 @@ module.exports = () => {
           test: /\.(png|jpg|jpeg|gif)$/,
           loader: 'file-loader',
           options: {
-            name: `[folder]/[name].${new Date().getTime()}.[ext]`,
+            name: `[folder]/[name].${timestamp}.[ext]`,
           },
         },
         {
