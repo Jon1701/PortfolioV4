@@ -63,6 +63,7 @@ module.exports = () => {
     output: {
       filename: `[name].${timestamp}.bundle.js`,
       path: path.join(PATHS.DEST),
+      publicPath: '/',
     },
 
     resolve: {
