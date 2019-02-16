@@ -95,6 +95,7 @@ module.exports = () => {
     },
 
     devServer: {
+      historyApiFallback: true,
       contentBase: PATHS.DEST,
       compress: true,
       open: false,
